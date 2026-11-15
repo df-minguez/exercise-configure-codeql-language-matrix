@@ -13,8 +13,11 @@ jobs:
       security-events: write
       actions: read
       contents: read
-    matrix:
-      language: ['javascript', 'python']
+   
+    strategy:
+      matrix:
+        language: ['javascript', 'python']
+
 
     steps:
       - name: Checkout repository
